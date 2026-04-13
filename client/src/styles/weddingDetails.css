@@ -1,0 +1,186 @@
+/* WeddingDetails.css */
+.edit-wedding-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f1f2f6;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.edit-input-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.edit-row {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-row input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn { background: #00b894; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+.cancel-btn { background: #b2bec3; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+
+.edit-toggle-btn {
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.details-container {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.back-button:hover {
+  color: #000;
+}
+
+.details-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.details-header h1 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.details-info {
+  display: flex;
+  gap: 20px;
+  color: #666;
+  margin: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Grille de gestion (Invités / Budget) */
+.management-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .management-grid {
+    grid-template-columns: 1fr; /* On empile sur mobile */
+  }
+}
+
+.manage-box {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.manage-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.manage-box h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.manage-box p {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Boutons spécifiques */
+.btn-manage {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-guests {
+  border: 1px solid #6c5ce7;
+  color: #6c5ce7;
+}
+
+.btn-guests:hover {
+  background: #6c5ce7;
+  color: white;
+}
+
+.btn-budget {
+  border: 1px solid #00b894;
+  color: #00b894;
+}
+
+.btn-budget:hover {
+  background: #00b894;
+  color: white;
+}
+.btn-vendors {
+  color: #fdcb6e; /* Texte sombre pour un meilleur contraste */
+  border: 1px solid #fdcb6e;
+}
+
+/* Effet au survol */
+.btn-vendors:hover {
+  background-color: #e1b12c; /* Un orange un peu plus soutenu */
+  transform: translateY(-2px); /* Petit effet de levée */
+  box-shadow: 0 4px 12px rgba(253, 203, 110, 0.3);
+  color: white; /* Texte blanc pour le contraste */
+}
+
+/* Effet au clic */
+.btn-vendors:active {
+  transform: translateY(0);
+}
+
+.loading {
+  padding: 50px;
+  text-align: center;
+  color: #666;
+}

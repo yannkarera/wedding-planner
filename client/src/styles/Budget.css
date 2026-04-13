@@ -1,0 +1,184 @@
+.budget-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #2d3436;
+}
+
+/* Bouton Retour */
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #636e72;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: #6c5ce7;
+}
+
+.page-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Grille de statistiques */
+.budget-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.summary-card {
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card.total { background: linear-gradient(135deg, #6c5ce7, #a29bfe); }
+.summary-card.paid { background: linear-gradient(135deg, #00b894, #55efc4); }
+.summary-card.rest { background: linear-gradient(135deg, #fab1a0, #ff7675); }
+
+.summary-card span {
+  font-size: 14px;
+  opacity: 0.9;
+  display: block;
+}
+
+.summary-card h3 {
+  margin: 5px 0 0 0;
+  font-size: 24px;
+}
+
+/* Formulaire d'ajout */
+.budget-form {
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.budget-form input {
+  padding: 12px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.budget-form input:first-child { flex: 2; }
+.budget-form input[type="number"] { flex: 1; }
+
+.budget-form input:focus {
+  border-color: #6c5ce7;
+}
+
+.add-btn {
+  background: #2d3436;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.add-btn:hover { transform: translateY(-2px); }
+
+/* Liste des éléments */
+.budget-list {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.budget-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f2f6;
+  transition: background 0.2s;
+}
+
+.budget-item:last-child { border-bottom: none; }
+
+.budget-item.paid-row {
+  background-color: #f8fcfb;
+}
+
+.budget-item.paid-row .item-name {
+  text-decoration: line-through;
+  color: #b2bec3;
+}
+
+.item-main {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.paid-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #00b894;
+}
+
+.item-name {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-price {
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.delete-icon {
+  background: none;
+  border: none;
+  color: #fab1a0;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.delete-icon:hover {
+  color: #ff7675;
+  background: #fff5f5;
+}
+
+.empty-msg {
+  text-align: center;
+  padding: 40px;
+  color: #b2bec3;
+}

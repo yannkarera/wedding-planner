@@ -1,0 +1,91 @@
+.vendors-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Formulaire en ligne */
+.vendor-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.vendor-form input, .vendor-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* Grille de cartes */
+.vendors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.vendor-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-top: 5px solid #fdcb6e;
+}
+
+.vendor-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.vendor-type {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #636e72;
+}
+
+.status-badge {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Couleurs des statuts */
+.status-badge.contacté { background: #e0e0e0; }
+.status-badge.en-attente { background: #fff3cd; color: #856404; }
+.status-badge.confirmé { background: #d4edda; color: #155724; }
+
+.vendor-name { margin: 0 0 10px 0; color: #2d3436; }
+
+.vendor-body p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px 0;
+  color: #636e72;
+  font-size: 14px;
+}
+
+.delete-vendor-btn {
+  margin-top: 15px;
+  background: none;
+  border: 1px solid #fab1a0;
+  color: #ff7675;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.delete-vendor-btn:hover {
+  background: #ff7675;
+  color: white;
+}

@@ -1,0 +1,59 @@
+/* À ajouter dans GuestList.css */
+.guest-page-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.back-to-wedding {
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #636e72;
+  font-size: 16px;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.back-to-wedding:hover {
+  color: #2d3436;
+}
+
+.guest-list-content {
+  /* On réutilise les styles de la carte qu'on a fait avant */
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+form{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+button{
+    background-color: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+select{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+}
