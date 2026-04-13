@@ -49,6 +49,7 @@ Extrait de code
 
 PORT=5000
 MONGO_URI=votre_lien_mongodb_atlas
+
 JWT_SECRET=votre_cle_secrete_super_securisee
 
     Note : Assurez-vous que le fichier .env est bien listé dans votre .gitignore avant de pousser sur GitHub.
