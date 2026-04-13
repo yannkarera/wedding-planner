@@ -67,17 +67,33 @@ Depuis le dossier /client :
 Bash
 
 npm run dev
+
 # L'application sera accessible sur http://localhost:5173
 
-🛣 Routes Principales de l'API
-Méthode	Route	Description
+# Routes Principales de l'API
+
+
 POST	/api/auth/register	Créer un nouveau compte utilisateur
+
+
 POST	/api/auth/login	Connexion et récupération du Token
+
+
 GET	/api/weddings	Liste des mariages de l'utilisateur
+
+
 POST	/api/weddings	Créer un nouveau mariage
+
+
 GET	/api/guests/:weddingId	Liste des invités d'un mariage
+
+
 PATCH	/api/budgets/:id	Modifier le statut "payé" d'une dépense
+
+
 POST	/api/vendors/:weddingId	Ajouter un prestataire
+
+
 💡 Résumé du Fonctionnement
 
     Authentification : L'utilisateur s'inscrit et se connecte. Un token JWT est généré et stocké pour sécuriser les accès suivants.
@@ -94,6 +110,3 @@ POST	/api/vendors/:weddingId	Ajouter un prestataire
 
     Persistance : Toutes les modifications sont enregistrées instantanément dans la base de données MongoDB via l'API REST.
 
-📝 Auteur
-
-Yann Karera - Passionné par le développement d'outils simplifiant la vie quotidienne.
