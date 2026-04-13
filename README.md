@@ -8,6 +8,8 @@ Wedding Planner App est une application web full-stack conçue pour simplifier l
 
 
 L'objectif est d'offrir une interface centralisée et intuitive pour réduire le stress lié aux préparatifs, en permettant une gestion en temps réel des coûts et des contacts essentiels.
+
+
 🛠 Technologies Utilisées
 
 L'application utilise la stack MERN :
