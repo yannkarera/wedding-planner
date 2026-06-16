@@ -184,3 +184,34 @@
   text-align: center;
   color: #666;
 }
+
+/* --- Bouton spécifique pour la gestion des Tâches --- */
+/* --- Bouton spécifique pour la gestion des Tâches --- */
+.btn-tasks {
+  background: none;
+  color: #0984e3;
+  border: 1px solid #0984e3;
+}
+
+/* Effet au survol */
+.btn-tasks:hover {
+  background-color: #0771c4; /* Un bleu un peu plus soutenu */
+  color: white; /* Texte blanc pour le contraste */
+}
+
+/* Effet au clic */
+.btn-tasks:active {
+  transform: translateY(0);
+}
+
+/* --- Wrapper d'icône pour les tâches --- */
+.icon-wrapper.color-blue {
+  background-color: #e3faf2; /* Fond très clair pour faire ressortir l'icône */
+  color: #0984e3;
+}
+
+/* --- Wrapper d'icône pour les tâches --- */
+.icon-wrapper.color-blue {
+  background-color: #e3faf2; /* Fond très clair pour faire ressortir l'icône */
+  color: #0984e3;
+}

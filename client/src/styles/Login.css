@@ -1,5 +1,12 @@
 /* styles/Login.css */
-
+h1{
+  text-align: center;
+  margin-top: 40px;
+  color: #6c5ce7;
+  font-size: 32px;
+  font-style: italic;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
 .login-container {
   display: flex;
   flex-direction: column;
@@ -8,6 +15,7 @@
   min-height: 80vh; /* Centre le formulaire verticalement dans la page */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 .login-card {
   display: flex;

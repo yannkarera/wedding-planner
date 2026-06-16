@@ -18,6 +18,7 @@ app.use('/api/weddings', require('./src/routes/weddingRoutes'));
 app.use('/api/guests', require('./src/routes/guestRoutes'));
 app.use('/api/vendors', require('./src/routes/vendorRoutes'));
 app.use('/api/budgets', require('./src/routes/budgetRoutes'));
+app.use('/api/tasks', require('./src/routes/taskRoutes'));
 
 // Lancement du serveur
 const PORT = process.env.PORT || 5000;

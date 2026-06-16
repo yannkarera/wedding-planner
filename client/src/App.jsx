@@ -7,6 +7,7 @@ import GuestList from './components/GuestList';
 import Budget from './components/Budget';
 import Register from './pages/Register';
 import Vendors from './components/Vendors';
+import TaskList from './pages/TaskList'; // Assurez-vous que le chemin est correct
 function App() {
   return (
     <Router>
@@ -38,6 +39,11 @@ function App() {
         <Route path="/vendors/:weddingId" element={
           <ProtectedRoute>
             <Vendors />
+          </ProtectedRoute>
+        } />
+        <Route path="/tasks/:weddingId" element={
+          <ProtectedRoute>
+            <TaskList />
           </ProtectedRoute>
         } />
       </Routes>

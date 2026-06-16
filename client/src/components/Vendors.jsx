@@ -59,7 +59,7 @@ const Vendors = () => {
         <ArrowLeft size={18} /> Retour
       </button>
 
-      <h2 className="page-title">🤝 Mes Prestataires</h2>
+      <h2 className="page-title"> Mes Prestataires</h2>
 
       {/* FORMULAIRE D'AJOUT */}
       <form onSubmit={handleSubmit} className="vendor-form">

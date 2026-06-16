@@ -21,6 +21,9 @@ const Login = () => {
 
   return (
     <div className="login-container">
+    <div className="title-section">
+      <h1>My Wedding Planner</h1>
+    </div>
       <div className="login-card">
         <h2>Connexion</h2>
         <form onSubmit={handleSubmit}>
@@ -55,7 +58,6 @@ const Login = () => {
         Pas de compte ? Inscrivez-vous
       </button>
     </div>
-    
   );
 };
 

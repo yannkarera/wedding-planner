@@ -23,6 +23,9 @@ const Register = () => {
 
     return (
         <div className="login-container">
+            <div className="title-section">
+                <h1>My Wedding Planner</h1>
+            </div>
             <div className="login-card">
                 <h2>Inscription</h2>
                 <form onSubmit={handleSubmit}>

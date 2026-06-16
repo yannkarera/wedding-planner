@@ -9,7 +9,8 @@ const generateToken = require('../utils/generateToken');
 router.post('/register', async (req, res) => {
 
     try {
-        const { name, email, password } = req.body;
+        const { name, password } = req.body;
+        const email = req.body.email.toLowerCase();
 
         const existingUser = await User.findOne({
             email: email
@@ -18,7 +19,7 @@ router.post('/register', async (req, res) => {
         if (existingUser) {
             return res.status(400).json({ message: 'Cet email est déjà utilisé' });
         }
-
+        
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
 
@@ -61,7 +62,8 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { password } = req.body;
+        const email = req.body.email.toLowerCase();
 
         const user = await User.findOne({
             email: email

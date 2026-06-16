@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { CheckSquare } from 'lucide-react';
 import api from '../api/axios';
 import { 
   ArrowLeft, 
@@ -162,9 +163,20 @@ const WeddingDetails = () => {
               Gérer les prestataires
             </button>
           </div>
+
+          <div className="manage-box">
+            <div className="icon-wrapper color-blue" style={{ backgroundColor: '#e3faf2' }}>
+              <CheckSquare size={32} />
+            </div>
+            <h3>Tâches</h3>
+            <p>Liste des tâches à accomplir pour le mariage.</p>
+            <button onClick={() => navigate(`/tasks/${id}`)} className="btn-tasks">
+              Voir les tâches
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+        </div>
   );
 };
 
