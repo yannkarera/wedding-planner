@@ -6,110 +6,61 @@ Wedding Planner App est une application web full-stack conçue pour simplifier l
 
 🚀 Objectif
 
-
 L'objectif est d'offrir une interface centralisée et intuitive pour réduire le stress lié aux préparatifs, en permettant une gestion en temps réel des coûts et des contacts essentiels.
 
+✨ Fonctionnalités Clés
+
+*   **Authentification Sécurisée :** Inscription, connexion et protection des routes via JSON Web Tokens (JWT) et hachage des mots de passe (Bcrypt).
+*   **Tableau de Bord Multi-Mariages :** Possibilité de créer, lister et basculer entre plusieurs projets de mariages.
+*   **Gestion des Invités :** Suivi en temps réel des listes d'invitations, des confirmations de présence (RSVP) et des détails associés.
+*   **Suivi Dynamique du Budget :** Enregistrement des dépenses avec calcul automatique du total payé et du reste à payer à l'aide d'un système de cases à cocher.
+*   **Annuaire des Prestataires :** Centralisation des contacts logistiques (traiteurs, photographes, DJs) avec suivi de leurs tarifs respectifs.
 
 🛠 Technologies Utilisées
 
 L'application utilise la stack MERN :
+*   **Frontend :** React.js (Vite), React Router, Axios, Lucide-React (icônes).
+*   **Backend :** Node.js, Express.js.
+*   **Base de données :** MongoDB Atlas (NoSQL) avec Mongoose.
+*   **Authentification :** JSON Web Tokens (JWT) et Bcrypt.
 
-    Frontend : React.js (Vite), React Router, Axios, Lucide-React (icônes).
+📂 Structure des Fichiers Modifiés / Principaux
 
-    Backend : Node.js, Express.js.
+Voici un aperçu des fichiers clés créés et modifiés pour faire tourner l'application :
 
-    Base de données : MongoDB Atlas (NoSQL) avec Mongoose.
-
-    Authentification : JSON Web Tokens (JWT) et Bcrypt pour le hachage des mots de passe.
-
-⚙️ Installation
-
-    Cloner le projet :
-    Bash
-
-    git clone https://github.com/ton-pseudo/wedding_planner.git
-    cd wedding_planner
-
-    Installer les dépendances du Backend :
-    Bash
-
-    cd api
-    npm install
-
-    Installer les dépendances du Frontend :
-    Bash
-
-    cd ../client
-    npm install
-
-🔐 Configuration du fichier .env
-
-Crée un fichier .env dans le dossier /api :
-Extrait de code
-
-PORT=5000
-MONGO_URI=votre_lien_mongodb_atlas
-
-JWT_SECRET=votre_cle_secrete_super_securisee
-
-    Note : Assurez-vous que le fichier .env est bien listé dans votre .gitignore avant de pousser sur GitHub.
-
-🏃 Lancement de l'application
-Lancer le Backend
-
-Depuis le dossier /api :
-Bash
-
-npm run start
-
- # Le serveur tournera sur http://localhost:5000
-
-Lancer le Frontend
-
-Depuis le dossier /client :
-Bash
-
-npm run dev
-
-# L'application sera accessible sur http://localhost:5173
-
-# Routes Principales de l'API
-
-
-POST	/api/auth/register	Créer un nouveau compte utilisateur
-
-
-POST	/api/auth/login	Connexion et récupération du Token
-
-
-GET	/api/weddings	Liste des mariages de l'utilisateur
-
-
-POST	/api/weddings	Créer un nouveau mariage
-
-
-GET	/api/guests/:weddingId	Liste des invités d'un mariage
-
-
-PATCH	/api/budgets/:id	Modifier le statut "payé" d'une dépense
-
-
-POST	/api/vendors/:weddingId	Ajouter un prestataire
-
-
-💡 Résumé du Fonctionnement
-
-    Authentification : L'utilisateur s'inscrit et se connecte. Un token JWT est généré et stocké pour sécuriser les accès suivants.
-
-    Tableau de Bord : L'utilisateur crée un ou plusieurs mariages. En cliquant sur l'un d'eux, il accède aux détails spécifiques.
-
-    Gestion de l'événement :
-
-        Invités : Suivi des présences et des invitations.
-
-        Budget : Chaque dépense est enregistrée. L'application calcule automatiquement le total payé et le reste à payer grâce à un système de cases à cocher.
-
-        Prestataires : Un annuaire dédié pour centraliser les contacts (traiteurs, DJs, photographes) et leurs tarifs.
-
-    Persistance : Toutes les modifications sont enregistrées instantanément dans la base de données MongoDB via l'API REST.
-
+```text
+wedding_planner/
+├── api/                        # BACKEND (Express & Mongoose)
+│   ├── config/
+│   │   └── db.js               # Connexion à MongoDB Atlas
+│   ├── models/                 # Schémas de données Mongoose
+│   │   ├── User.js
+│   │   ├── Wedding.js
+│   │   ├── Guest.js
+│   │   ├── Budget.js
+│   │   └── Vendor.js
+│   ├── routes/                 # Définition des endpoints d'API
+│   │   ├── auth.js
+│   │   ├── weddings.js
+│   │   ├── guests.js
+│   │   ├── budgets.js
+│   │   └── vendors.js
+│   ├── middleware/
+│   │   └── authMiddleware.js   # Validation du token JWT
+│   ├── .env                    # Variables d'environnement (local)
+│   └── server.js               # Point d'entrée de l'API
+│
+└── client/                     # FRONTEND (React & Vite)
+    ├── src/
+    │   ├── components/         # Composants UI réutilisables (Navbar, Sidebar, Cards)
+    │   ├── pages/              # Vues principales de l'application
+    │   │   ├── Login.jsx
+    │   │   ├── Register.jsx
+    │   │   ├── Dashboard.jsx
+    │   │   ├── GuestsManager.jsx
+    │   │   ├── BudgetTracker.jsx
+    │   │   └── VendorsDirectory.jsx
+    │   ├── services/
+    │   │   └── api.js          # Configuration d'Axios et appels API
+    │   ├── App.jsx             # Configuration des routes (React Router)
+    │   └── main.jsx
